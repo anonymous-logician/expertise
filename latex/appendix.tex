@@ -1,0 +1,48 @@
+\documentclass[sn-apa]{sn-jnl}%
+\jyear{2022}%
+
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%
+\newtheorem{proposition}{Proposition}%
+\newtheorem{lemma}{Lemma}%
+\newtheorem{corollary}{Corollary}%
+\newtheorem{claim}{Claim}%
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+
+\usepackage{xr}
+\externaldocument{main}
+
+% copied from main.tex
+\catcode`\|=12\relax
+\usepackage[capitalise]{cleveref}
+\input{macros}
+\crefname{claim}{Claim}{Claims}
+\Crefname{claim}{Claim}{Claims}
+
+\begin{document}
+
+\newcommand{\appendixtitle}{Proofs for ``Expertise and information: an epistemic logic perspective"}
+\title[\appendixtitle]{\appendixtitle}
+
+\author[1]{\fnm{Anonymous} \sur{Author}}
+\affil[1]{
+    \orgname{Anonymous Institution}
+}
+
+\maketitle
+
+\begin{appendices}
+    \input{proofs}
+\end{appendices}
+
+\bibliography{references}%
+
+\end{document}
